@@ -1,21 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
-:root{
-  --background:rgba(85,214,170,0.85);
-}
+
 *, *::before, *::after{
   box-sizing:border-box;
 }
 body{
   margin:0;
   padding:0;
-  background:#222;
   font-family:"Lato",sans-serif;
   font-weight:400;
 }
 
 nav {
-  background:var(--background);
   position:fixed;
   z-index:999;
   width:100%;
@@ -34,17 +30,59 @@ nav ul{
 
 
 nav li{
-
   margin-left:1rem;
 }
 
 nav a {
-  color:white;
+  color:#000;
   text-decoration:none;
   font-size:1.2rem; 
-  text-transform:uppercase;
 }
 
 nav a:hover{
-  color:#000;
+  color:#0067df;
 }
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding-top: 5px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a{
+  display:block;
+  padding:10px;
+  text-align:left;
+}
+
+.dropdown-content a:hover{
+  background-color: #0067df;
+  color:#fff;
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* -------------------------------------*/
+/* Arrow when dropdown link is selected */
+/* -------------------------------------*/
+
+/* .dropdown-content a:after{
+  content: "\2192";
+  position: absolute;
+  opacity: 0;
+  top: 10px;
+  right: 10px;
+  transition: .5s;
+}
+
+.dropdown-content a:hover:after{
+  opacity:1;
+} */
